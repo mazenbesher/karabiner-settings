@@ -2,6 +2,52 @@
   "title": "My Keys",
   "rules": [
     {
+      "description": "Match Windows Accent Keys Layout",
+      "manipulators": [
+        {
+          "description": "move tilde/accent to the key left of 1 (as in windows)",
+          "type": "basic",
+          "from": {
+            "key_code": "non_us_backslash",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ]
+        },
+        {
+          "description": "backslash (inside return) instead of tilde (beside left shift)",
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde"
+          },
+          "to": [
+            {
+              "key_code": "backslash"
+            }
+          ]
+        },
+        {
+          "description": "non_us_backslash (on keyboard to the left of the 1) to backslash (inside the return key)",
+          "type": "basic",
+          "from": {
+            "key_code": "backslash"
+          },
+          "to": [
+            {
+              "key_code": "non_us_backslash"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Switch MAC Keys",
       "manipulators": [
         {
@@ -9,7 +55,9 @@
           "from": {
             "key_code": "left_command",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -31,7 +79,9 @@
           "from": {
             "key_code": "left_option",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -53,7 +103,9 @@
           "from": {
             "key_code": "left_control",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
