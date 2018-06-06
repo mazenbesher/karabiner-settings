@@ -69,7 +69,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.microsoft\\.rdc\\.macos$"
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
               ]
             }
           ]
@@ -93,7 +94,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.microsoft\\.rdc\\.macos$"
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
               ]
             }
           ]
@@ -117,7 +119,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.microsoft\\.rdc\\.macos$"
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
               ]
             }
           ]
@@ -221,6 +224,109 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "description": "VMWare",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to":[
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ],
+          "description": "change CMD to ALT"
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to":[
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ],
+          "description": "change OPTION to WIN"
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ],
+          "description": "CTRL to CTRL"
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "left_shift"
+              ]
+            }
+          },
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ],
+          "description": "prevent WIN+TAB from launching Mac application switcher"
         }
       ]
     }
