@@ -181,6 +181,34 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
+                                "description": "Win+TAB launch TaskViewer through DesktopEnhancer shortcut (Alt+`)",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "description": "Capslock to F10 (== FN+F10) for Ditto",
                                 "from": {
                                     "key_code": "caps_lock",
@@ -213,7 +241,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "description": "prevent alt+tab from launching Mac application switcher",
+                                "description": "Prevent alt+tab from launching Mac application switcher",
                                 "from": {
                                     "key_code": "tab",
                                     "modifiers": {

@@ -14,3 +14,7 @@ New Win:       ctrl,   fn, win, alt
 ```
 FN + Capslock == F10
 ```
+
+## Show Windows TaskViewer
+Using the shortcut from the `Desktop enhancer` script `Alt+accent`
+`accent`: key to the left of the 1
