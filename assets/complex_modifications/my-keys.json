@@ -160,19 +160,25 @@
       "description": "Windows Remote Desktop",
       "manipulators": [
         {
-          "description": "Capslock to F10 for Ditto",
+          "description": "Capslock to F10 (== FN+F10) for Ditto",
           "type": "basic",
           "from": {
             "key_code": "caps_lock",
             "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
               "optional": [
-                "any"
+                "left_shift"
               ]
             }
           },
           "to":[
             {
-              "key_code": "f10"
+              "key_code": "f10",
+              "modifiers": [
+                  "left_control", "fn"
+              ]
             }
           ],
           "conditions": [

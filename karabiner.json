@@ -181,18 +181,25 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "description": "Capslock to F10 for Ditto",
+                                "description": "Capslock to F10 (== FN+F10) for Ditto",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ],
                                         "optional": [
-                                            "any"
+                                            "left_shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "f10"
+                                        "key_code": "f10",
+                                        "modifiers": [
+                                            "left_control",
+                                            "fn"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -334,7 +341,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "description": "change CMD to ALT",
+                                "description": "CMD to ALT",
                                 "from": {
                                     "key_code": "left_command",
                                     "modifiers": {
@@ -359,7 +366,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "description": "change OPTION to WIN",
+                                "description": "ALT to WIN==CMD",
                                 "from": {
                                     "key_code": "left_option",
                                     "modifiers": {
@@ -384,9 +391,34 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "description": "CTRL to CTRL",
+                                "description": "CTRL to FN",
                                 "from": {
                                     "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.vmware\\.fusion$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "FN to CTRL",
+                                "from": {
+                                    "key_code": "fn",
                                     "modifiers": {
                                         "optional": [
                                             "any"
