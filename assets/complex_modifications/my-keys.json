@@ -58,9 +58,6 @@
             "modifiers": {
               "mandatory": [
                 "left_option"
-              ],
-              "optional": [
-                "any"
               ]
             }
           },
