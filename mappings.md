@@ -1,3 +1,8 @@
+# ToDo
+
+# Issuses
+1. can't use `shift` with `alt+tab` in tab switcher.
+
 # Switch MAC Keys
 ```
 Original Mac:   fn , ctrl, alt , cmd

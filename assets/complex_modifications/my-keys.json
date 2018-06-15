@@ -226,6 +226,208 @@
       ]
     },
     {
+      "description": "Text selection",
+      "manipulators": [
+        {
+          "description": "← + CTRL (actual key FN) instead of ALT to select words",
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "→ + CTRL (actual key FN) instead of ALT to select words",
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "FN to home/end, page up/down",
+      "manipulators": [
+        {
+          "description": "← + FN == Home",
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "→ + FN == End",
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "↑ + FN == Page Up",
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "↓ + FN == Page Down",
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Windows Remote Desktop",
       "manipulators": [
         {
