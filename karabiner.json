@@ -706,6 +706,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
+                                        ],
+                                        "optional": [
+                                            "left_shift"
                                         ]
                                     }
                                 },
