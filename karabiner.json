@@ -61,6 +61,75 @@
                         ]
                     },
                     {
+                        "description": "App/Tab Switching",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.vmware\\.fusion$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "description": "App switcher with ALT (original CMD)+TAB instead of CTRL+TAB",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.vmware\\.fusion$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "description": "CTRL+TAB to switch tabs instead of AppSwitcher",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Switch MAC Keys",
                         "manipulators": [
                             {
@@ -688,7 +757,7 @@
                         ]
                     },
                     {
-                        "description": "App/Tab Switching",
+                        "description": "Shortcuts to open Apps",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -700,56 +769,18 @@
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
-                                "description": "App switcher with ALT (original CMD)+TAB instead of CTRL+TAB",
+                                "description": "Open finder with E + CTRL (original ALT) to match windows explorer (WIN+E)",
                                 "from": {
-                                    "key_code": "tab",
+                                    "key_code": "e",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_option"
-                                        ],
-                                        "optional": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^com\\.vmware\\.fusion$"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "description": "CTRL+TAB to switch tabs instead of AppSwitcher",
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
                                             "left_control"
                                         ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Finder.app'"
                                     }
                                 ],
                                 "type": "basic"
