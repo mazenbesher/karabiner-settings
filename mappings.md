@@ -2,6 +2,7 @@
 
 # Issuses
 1. can't use `shift` with `alt+tab` in tab switcher.
+2. in RDP can't use Ctrl+Win+D (note: works if D is pressed before the modifiers)
 
 # Switch MAC Keys
 ```
