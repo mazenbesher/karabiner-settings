@@ -522,29 +522,6 @@
           ]
         },
         {
-          "description": "Prevent alt+tab from launching Mac application switcher",
-          "type": "basic",
-          "from": {
-            "key_code": "tab",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "left_shift"
-              ]
-            }
-          },
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.rdc\\.macos$"
-              ]
-            }
-          ]
-        },
-        {
           "description": "CMD to ALT",
           "type": "basic",
           "from": {
