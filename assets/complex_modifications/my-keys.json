@@ -678,6 +678,42 @@
       ]
     },
     {
+      "description": "Windows Remote Desktop + karabiner.ahk",
+      "manipulators": [
+        {
+          "description": "Create New Desktop (AHK mapping: Shift+Alt+F12 -> Ctrl+LWin+d)",
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f12",
+              "modifiers": [
+                "fn",
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "VMWare",
       "manipulators": [
         {
