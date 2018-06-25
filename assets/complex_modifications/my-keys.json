@@ -488,6 +488,34 @@
       "description": "Windows Remote Desktop",
       "manipulators": [
         {
+          "description": "Fn+Enter to simulate Insert",
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "insert"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$"
+              ]
+            }
+          ]
+        },
+        {
           "description": "Win+TAB launch TaskViewer through DesktopEnhancer shortcut (Alt+`)",
           "type": "basic",
           "from": {
