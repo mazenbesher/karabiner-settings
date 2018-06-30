@@ -77,6 +77,35 @@
           ]
         },
         {
+          "description": "Go to desktop with Ctrl+D (to match Win+D on windwos)",
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "mission_control",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        },
+        {
           "description": "Open chrome with 1 + CTRL (original ALT) to match windows explorer (WIN+1)",
           "type": "basic",
           "from": {
