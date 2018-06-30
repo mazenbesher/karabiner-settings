@@ -865,6 +865,37 @@
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
+                                "description": "Take screenshot with Ctrl+Shift+S (match Win+Shift+S)",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.vmware\\.fusion$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "description": "Open chrome with 1 + CTRL (original ALT) to match windows explorer (WIN+1)",
                                 "from": {
                                     "key_code": "1",
