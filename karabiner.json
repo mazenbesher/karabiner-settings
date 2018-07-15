@@ -865,6 +865,32 @@
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
+                                "description": "Go to mission control with Ctrl+Tab (to match Win+Tab on windwos)",
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "mission_control"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.vmware\\.fusion$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "description": "Take screenshot with Ctrl+Shift+S (match Win+Shift+S)",
                                 "from": {
                                     "key_code": "s",
