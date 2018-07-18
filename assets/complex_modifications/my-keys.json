@@ -662,7 +662,7 @@
           ]
         },
         {
-          "description": "CMD to ALT",
+          "description": "CMD to ALT (left)",
           "type": "basic",
           "from": {
             "key_code": "left_command",
@@ -675,6 +675,31 @@
           "to": [
             {
               "key_code": "left_option"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "CMD to ALT (right)",
+          "type": "basic",
+          "from": {
+            "key_code": "right_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
             }
           ],
           "conditions": [
@@ -750,6 +775,31 @@
           "to": [
             {
               "key_code": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Right ALT to CTRL",
+          "type": "basic",
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_control"
             }
           ],
           "conditions": [
