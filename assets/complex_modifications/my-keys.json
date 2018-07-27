@@ -263,6 +263,32 @@
       "description": "Switch MAC Keys",
       "manipulators": [
         {
+          "description": "Capslock to F13 (since phyiscal keyboard doesn't have F13)",
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f13"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.vmware\\.fusion$"
+              ]
+            }
+          ]
+        },
+        {
           "description": "CMD to ALT",
           "type": "basic",
           "from": {
